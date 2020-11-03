@@ -10,13 +10,24 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-
-    <div class="container">
-      <p id="notice"><%= notice %></p>
-
+    <header class="navbar navbar-fixed-top navbar-inverse">
+        <%= render 'layouts/header' %>
+    </header>
+    <div class="body st-hover st-current">
+      <div class="container st-hover">
+        <p id="notice"><%= notice %></p>
+        
+        <div class="row st-hover">
+          <div class=".col-xs-3">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <%= render 'layouts/footer' %>
+    
+    <footer>
+        <%= render 'layouts/footer' %>
+    </footer>
+ 
   </body>
 </html>
